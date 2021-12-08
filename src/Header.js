@@ -1,21 +1,24 @@
-import { Navbar, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import logo from './images/logo-test.png';
+
+const headerStyle = {
+  display: 'flex',
+  padding: '20px',
+  height: '12vh',
+  alignItems: 'center',
+};
+
+const titleStyle = {
+  fontWeight: 'bold',
+  fontSize: '60px',
+};
 
 const Header = () => {
   return (
-    <Navbar bg='' variant='dark'>
-      <Container>
-        <Navbar.Brand href='#home'>
-          <img
-            alt=''
-            src='/logo.svg'
-            width='30'
-            height='30'
-            className='d-inline-block align-top'
-          />{' '}
-          React Bootstrap
-        </Navbar.Brand>
-      </Container>
-    </Navbar>
+    <Container fluid style={headerStyle}>
+      <img src={logo} width='100' height='100' alt='fgc-logo' />
+      <h1 style={titleStyle}>FGC</h1>
+    </Container>
   );
 };
 

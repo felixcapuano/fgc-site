@@ -1,18 +1,16 @@
-import { Col, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
-const style = {
-  'background-color': 'yellow',
-};
+const titleStyle = {
+  padding: '8px',
+  margin: '0px 0px 0px 0px',
+}
 
-const Tile = () => {
+const Tile = ({ title, hidden, children }) => {
   return (
-    <Row>
-      <Col>
-        <h1>title</h1>
-        <h2>description</h2>
-        {/* composant */}
-      </Col>
-    </Row>
+    <Container style={titleStyle} hidden={hidden}>
+      <h2 style={titleStyle}>{title}</h2>
+      {children}
+    </Container>
   );
 };
 
