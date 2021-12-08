@@ -2,12 +2,12 @@ import Background from './Background';
 import Header from './Header';
 import Menu from './Menu';
 import Tile from './Tile';
-import { Container } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import Gallery from './Gallery';
 import Footer from './Footer';
 
 import './firebase';
-import './css/fonts.css';
+import './css/App.css';
 
 const appStyle = {
   fontFamily: 'mclaren, Arial, sans-serif',
@@ -25,13 +25,20 @@ const App = () => {
       <Background />
       <Header />
       <Menu />
-      <Container style={tilesStyle}>
-        <Tile title='Voici quelques jeux auxquels nous jouons'>
-          <Gallery />
-        </Tile>
-        <Tile title='Voici les évènements du moment' hidden />
-        <Tile title='Voici nos plus fidèles donateurs' hidden />
-        <Tile title='Voilà enfin comment nous contacter' />
+      <Container fluid style={{ padding: '0px' }}>
+        <Col
+          md={{ span: 10, offset: 1 }}
+          xl={{ span: 8, offset: 2 }}
+          xxl={{ span: 6, offset: 3 }}
+          style={tilesStyle}
+        >
+          <Tile title='Voici quelques jeux auxquels nous jouons' hidden>
+            <Gallery />
+          </Tile>
+          <Tile title='Voici les évènements du moment' hidden />
+          <Tile title='Voici nos plus fidèles donateurs' hidden />
+          <Tile title='Voilà enfin comment nous contacter' hidden/>
+        </Col>
       </Container>
       <Footer />
     </div>
