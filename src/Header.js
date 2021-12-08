@@ -3,7 +3,7 @@ import logo from './images/logo-test.png';
 
 const headerStyle = {
   display: 'flex',
-  padding: '20px',
+  padding: '1rem',
   height: '12vh',
   alignItems: 'center',
 };

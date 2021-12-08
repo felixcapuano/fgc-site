@@ -12,7 +12,7 @@ const menuStyle = {
 
 const titleStyle = {
   fontWeight: 'bold',
-  fontSize: '5rem',
+  fontSize: '3rem',
   letterSpacing: '3px',
   margin: '0px 0px 0px 0px',
   textShadow: '2px 2px black'
