@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap';
 import Gallery from './Gallery';
 import Footer from './Footer';
 
+import { firebase } from './firebase';
 import './css/fonts.css';
 
 const appStyle = {
